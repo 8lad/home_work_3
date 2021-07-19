@@ -1,0 +1,39 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Geneva", "Tahoma", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $black;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+}

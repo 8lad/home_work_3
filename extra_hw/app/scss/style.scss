@@ -1,0 +1,240 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+main {
+    padding-top: 60px;
+}
+
+.cards {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+    &__visual {
+        width: 50%;
+        flex-grow: 1;
+        position: relative;
+    }
+    &__btn {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        background-color: $button_bg;
+        color: $button_color;
+        display: inline-block;
+        padding: 15px 40px;
+        border-radius: $button_radius;
+        font-size: 17px;
+        line-height: 20px;
+        text-transform: uppercase;
+        transition: all .5s;
+        &:hover {
+            color: $button_bg;
+            background: $white;
+        }
+    }
+    &__body {
+        margin: 40px 0 0;
+        width: 50%;
+        flex-grow: 1;
+        z-index: 1;
+    }
+    &__holder {
+        box-shadow: 2px 2px 15px #dbe5ea;
+        padding: 30px 30px 100px 50px;
+        background: $card-bg;
+        h3 {
+            color: $title-color;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+    }
+    &__holder--right {
+        margin: 0 0 0 -50px;
+    }
+    &__holder--left {
+        margin: 0 -50px 0 0;
+    }
+}
+
+.btn {
+    background-color: $button_bg;
+    color: $button_color;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: $button_radius;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: all .5s;
+    &:hover {
+        color: $button_bg;
+        background: $white;
+    }
+}
+
+.btn--big {
+    position: relative;
+    padding: 15px 30px 15px 55px;
+    color: $green;
+    background-color: $white;
+    border: 2px solid $green;
+    margin-left: auto;
+    margin-right: auto;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 11px;
+        border-color: transparent transparent transparent $green;
+    }
+    &:hover {
+        background: $button_bg;
+        color: $white;
+    }
+}
+
+.section__title {
+    color: $title-color;
+    font-size: 35px;
+    line-height: 40px;
+    margin: 0 auto 35px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.picks {
+    background: #f7f9ee;
+    padding: 45px 0 50px;
+    margin-bottom: 50px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 262px;
+        text-align: center;
+    }
+    &__descr {
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+    &__descr:hover .picks__text {
+        opacity: 1;
+    }
+    &__text {
+        padding: 70px 40px;
+        color: $white;
+        background: rgba(0, 0, 0, .5);
+        opacity: 0;
+        transition: all .5s;
+    }
+    h3 {
+        color: $title-color;
+        font-size: 23px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+    &__btn {
+        background: $button_bg;
+        display: inline-block;
+        color: $white;
+        padding: 15px 65px;
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: $button_radius;
+        box-shadow: 2px 2px 15px #bbbbbf;
+        text-transform: uppercase;
+        transition: all .5s;
+        &:hover {
+            color: $green;
+            background: $white;
+        }
+    }
+}
+
+.form {
+    max-width: 350px;
+    padding: 45px 25px 20px;
+    background: $white;
+    box-shadow: 2px 2px 15px #bbbbbf;
+    margin: 0 auto 50px;
+    text-align: center;
+    h3 {
+        max-width: 260px;
+        margin-bottom: 35px;
+        font-size: 24px;
+        color: #4a4a4a;
+    }
+    &__btn {
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 23px;
+        border: none;
+        box-shadow: none;
+        color: $white;
+        font-size: 16px;
+    }
+    &__btn-fb {
+        background: #405d9a;
+        position: relative;
+        img {
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: -5px;
+        }
+    }
+    &__btn-sign {
+        background: #f27242;
+    }
+    &__row {
+        width: 100%;
+        margin-bottom: 25px;
+        color: $form-color;
+        font-size: 13px;
+        position: relative;
+        margin-right: 10px;
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 45%;
+            height: 1px;
+            top: 50%;
+            background: $form-color;
+        }
+        &::before {
+            left: 0;
+        }
+        &::after {
+            right: 0;
+        }
+    }
+    input {
+        width: 100%;
+        margin-bottom: 14px;
+        border: 1px solid $form-color;
+        padding: 18px 19px;
+        font-size: 13px;
+        color: $form-color;
+    }
+}

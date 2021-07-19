@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    word-break: break-all;
+}
+
+img {
+    max-width: 100%;
+}
+
+.box {
+    width: 350px;
+    height: 220px;
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 30px;
+    border: 2px dashed #f00;
+    background: #0f0;
+}
+
+.content {
+    max-width: 650px;
+}
+
+.content__top-img {
+    max-width: 200px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.content__bottom-img {
+    float: right;
+    margin: 20px 0 20px 20px;
+    max-width: 170px;
+}
